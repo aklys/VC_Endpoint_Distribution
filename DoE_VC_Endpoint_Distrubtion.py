@@ -280,18 +280,18 @@ plt.rcParams['animation.bitrate'] = 1000
 
 
 # Create video writer
-FFwriter = animation.FFMpegWriter(fps=10, extra_args=['-s', '1080:1920', '-aspect', '16:9'])
-
-# Trigger saving of animation to video
-print("Creating Video File")
-c_anim.save('VC_Endpoint_Distribution-2008_2017-10FPS.mp4', writer=FFwriter, dpi=600)
-
-print("Animation Video Created")
+# FFwriter = animation.FFMpegWriter(fps=10, extra_args=['-s', '1080:1920', '-aspect', '16:9'])
+#
+# # Trigger saving of animation to video
+# print("Creating Video File")
+# c_anim.save('VC_Endpoint_Distribution-2008_2017-10FPS.mp4', writer=FFwriter, dpi=600)
+#
+# print("Animation Video Created")
 
 # Display Figure
-# mng = plt.get_current_fig_manager()
-# mng.window.state('zoomed')
-# plt.show()
+mng = plt.get_current_fig_manager()
+mng.window.state('zoomed')
+plt.show()
 
 # Write to csv file after pivot
 # comp_new = pd.pivot_table(comp_new, index=['DATE', 'SITE TYPE', 'MAKE', 'MODEL'], columns=['COUNTER'])
